@@ -99,7 +99,7 @@ sequenceDiagram
 ### 4) Ranking and scoring
 
 - Scores blend semantic match, skill overlap, domain match, behavioral signals,
-	learning velocity, and stability.
+  learning velocity, and stability.
 - Final score is a weighted sum using default weights in ranking_engine/weights.py.
 
 Example scoring expression:
@@ -161,7 +161,7 @@ Default weights:
 
 ### Backend
 
-1) Create a virtual environment and install dependencies:
+1. Create a virtual environment and install dependencies:
 
 ```
 python -m venv .venv
@@ -169,15 +169,15 @@ python -m venv .venv
 pip install -r backend/requirements.txt
 ```
 
-2) Install spaCy model:
+2. Install spaCy model:
 
 ```
 python -m spacy download en_core_web_sm
 ```
 
-3) Create .env in backend/ with required variables.
+3. Create .env in backend/ with required variables.
 
-4) Run the API:
+4. Run the API:
 
 ```
 uvicorn app.main:app --reload
@@ -185,16 +185,16 @@ uvicorn app.main:app --reload
 
 ### Frontend
 
-1) Install dependencies:
+1. Install dependencies:
 
 ```
 cd frontend
 npm install
 ```
 
-2) Create frontend/.env.local and set NEXT_PUBLIC_API_URL.
+2. Create frontend/.env.local and set NEXT_PUBLIC_API_URL.
 
-3) Start the dev server:
+3. Start the dev server:
 
 ```
 npm run dev
@@ -225,10 +225,10 @@ Frontend env vars (frontend/.env.local):
 
 ## Demo workflow
 
-1) POST /seed or run scripts/seed_demo.py.
-2) POST /jobs/analyze with a job description.
-3) POST /rank to get explainable candidate rankings.
-4) POST /chat for recruiter-style queries and shortlists.
+1. POST /seed or run scripts/seed_demo.py.
+2. POST /jobs/analyze with a job description.
+3. POST /rank to get explainable candidate rankings.
+4. POST /chat for recruiter-style queries and shortlists.
 
 ## Notes and limitations
 
