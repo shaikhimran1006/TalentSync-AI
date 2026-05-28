@@ -212,7 +212,7 @@ docker compose up -d
 
 Backend env vars (backend/.env):
 
-- GROQ_API_KEY: API key for Groq (optional for demo).
+- GROQ_API_KEY: API key for Groq.
 - GROQ_MODEL: defaults to llama3-70b-8192.
 - DATABASE_URL: defaults to sqlite+aiosqlite:///./talentsync.db.
 - REDIS_URL: optional, enables embedding cache persistence.
