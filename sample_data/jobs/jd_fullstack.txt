@@ -1,0 +1,20 @@
+Title: Full Stack AI Product Engineer
+
+We are looking for a Full Stack AI Product Engineer to build AI-first product experiences for recruiters. You will work across frontend, backend, and AI pipelines.
+
+Responsibilities:
+- Build responsive dashboards and data visualizations
+- Implement FastAPI services and async APIs
+- Integrate LLMs for explainable insights
+- Create semantic search and ranking features
+- Partner with design to deliver premium UX
+
+Requirements:
+- React or Next.js with TypeScript
+- Python backend with API design
+- Familiarity with embeddings and vector search
+- Strong product mindset and communication skills
+
+Preferred:
+- Experience with Recharts or data viz libraries
+- Experience with spacy or NLP pipelines

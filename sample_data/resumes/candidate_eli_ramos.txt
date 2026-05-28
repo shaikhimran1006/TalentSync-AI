@@ -1,0 +1,17 @@
+Eli Ramos
+Backend Engineer
+
+Summary
+Backend engineer with 8 years in cloud infrastructure, reliability, and platform tooling. Known for driving operational excellence and mentoring teams.
+
+Experience
+- Staff Backend Engineer, NovaCloud (2020-2026)
+  - Built infra automation, improved deployment reliability by 40%
+- Senior Engineer, CloudCraft (2016-2020)
+  - Maintained scalable APIs and data pipelines
+
+Skills
+Python, Go, Docker, AWS, Terraform, CI/CD, Observability, Kafka
+
+Education
+BS Computer Engineering

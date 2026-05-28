@@ -1,0 +1,119 @@
+[
+  {
+    "id": "cand_ava_chen",
+    "name": "Ava Chen",
+    "role": "AI Platform Engineer",
+    "location": "San Francisco, CA",
+    "experience_years": 7,
+    "summary": "AI platform engineer with 7+ years building ML infrastructure, vector search systems, and distributed APIs.",
+    "skills": ["Python", "FastAPI", "FAISS", "Docker", "Kubernetes", "AWS", "Terraform", "Redis", "Postgres", "CI/CD"],
+    "domains": ["AI Platform", "Infra", "MLOps"],
+    "leadership": 0.82,
+    "learning_velocity": 0.78,
+    "stability": 0.74,
+    "collaboration": 0.8,
+    "projects": ["Retrieval system", "Kubernetes migration", "Model serving"],
+    "growth_timeline": [
+      {"year": 2019, "level": "Senior Engineer"},
+      {"year": 2021, "level": "Lead Engineer"},
+      {"year": 2023, "level": "Platform Lead"}
+    ]
+  },
+  {
+    "id": "cand_mateo_singh",
+    "name": "Mateo Singh",
+    "role": "Full Stack Product Engineer",
+    "location": "Austin, TX",
+    "experience_years": 6,
+    "summary": "Product-focused full stack engineer with 6 years building AI dashboards, semantic search, and recruiter analytics.",
+    "skills": ["TypeScript", "Next.js", "React", "Python", "FastAPI", "Recharts", "Postgres", "Redis", "Sentence Transformers"],
+    "domains": ["Recruiting Tech", "Data Viz", "AI Product"],
+    "leadership": 0.7,
+    "learning_velocity": 0.84,
+    "stability": 0.68,
+    "collaboration": 0.86,
+    "projects": ["Recruiter analytics", "LLM insights", "Semantic ranking"],
+    "growth_timeline": [
+      {"year": 2020, "level": "Engineer"},
+      {"year": 2022, "level": "Senior Engineer"},
+      {"year": 2024, "level": "Product Engineer"}
+    ]
+  },
+  {
+    "id": "cand_nora_patel",
+    "name": "Nora Patel",
+    "role": "ML Engineer",
+    "location": "New York, NY",
+    "experience_years": 5,
+    "summary": "ML engineer focused on embeddings, rerankers, and semantic matching systems.",
+    "skills": ["Python", "PyTorch", "Sentence Transformers", "spaCy", "NLP", "Cross-Encoders", "FAISS"],
+    "domains": ["NLP", "ML", "Search"],
+    "leadership": 0.62,
+    "learning_velocity": 0.9,
+    "stability": 0.6,
+    "collaboration": 0.78,
+    "projects": ["Embedding pipelines", "Reranker tuning", "Skill taxonomy"],
+    "growth_timeline": [
+      {"year": 2021, "level": "ML Engineer"},
+      {"year": 2023, "level": "Senior ML Engineer"}
+    ]
+  },
+  {
+    "id": "cand_eli_ramos",
+    "name": "Eli Ramos",
+    "role": "Backend Engineer",
+    "location": "Seattle, WA",
+    "experience_years": 8,
+    "summary": "Backend engineer with strong infra adaptability and cloud reliability background.",
+    "skills": ["Python", "Go", "Docker", "AWS", "Terraform", "CI/CD", "Observability", "Kafka"],
+    "domains": ["Infrastructure", "Platform"],
+    "leadership": 0.76,
+    "learning_velocity": 0.72,
+    "stability": 0.8,
+    "collaboration": 0.74,
+    "projects": ["Infra modernization", "Pipeline reliability"],
+    "growth_timeline": [
+      {"year": 2018, "level": "Senior Engineer"},
+      {"year": 2022, "level": "Staff Engineer"}
+    ]
+  },
+  {
+    "id": "cand_jules_kim",
+    "name": "Jules Kim",
+    "role": "Data Engineer",
+    "location": "Chicago, IL",
+    "experience_years": 6,
+    "summary": "Data engineer with strong pipelines, feature stores, and analytics systems.",
+    "skills": ["Python", "Spark", "Airflow", "SQL", "Postgres", "dbt", "Data Pipelines"],
+    "domains": ["Data", "Analytics"],
+    "leadership": 0.65,
+    "learning_velocity": 0.7,
+    "stability": 0.77,
+    "collaboration": 0.75,
+    "projects": ["Feature store", "Analytics modernization"],
+    "growth_timeline": [
+      {"year": 2019, "level": "Data Engineer"},
+      {"year": 2022, "level": "Senior Data Engineer"}
+    ]
+  },
+  {
+    "id": "cand_samira_olive",
+    "name": "Samira Olive",
+    "role": "Product Designer",
+    "location": "Remote",
+    "experience_years": 7,
+    "summary": "Product designer with AI SaaS experience and strong collaboration.",
+    "skills": ["Product Design", "UX", "User Research", "Design Systems", "Collaboration"],
+    "domains": ["Design", "AI SaaS"],
+    "leadership": 0.6,
+    "learning_velocity": 0.75,
+    "stability": 0.7,
+    "collaboration": 0.9,
+    "projects": ["Design systems", "AI workflow UX"],
+    "growth_timeline": [
+      {"year": 2018, "level": "Designer"},
+      {"year": 2021, "level": "Senior Designer"},
+      {"year": 2024, "level": "Lead Designer"}
+    ]
+  }
+]

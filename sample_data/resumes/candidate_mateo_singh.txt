@@ -1,0 +1,18 @@
+Mateo Singh
+Full Stack Product Engineer
+
+Summary
+Product-focused full stack engineer with 6 years building AI dashboards, semantic search, and recruiter analytics.
+
+Experience
+- Full Stack Engineer, TalentGrid (2022-2026)
+  - Built recruiter analytics dashboard with Next.js and Recharts
+  - Integrated LLM-based insights and ranking explanations
+- Backend Engineer, SignalWave (2019-2022)
+  - Implemented async FastAPI services and vector search prototypes
+
+Skills
+TypeScript, Next.js, React, Python, FastAPI, Recharts, Postgres, Redis, Sentence Transformers
+
+Education
+BS Software Engineering

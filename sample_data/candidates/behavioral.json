@@ -1,0 +1,32 @@
+[
+  {
+    "candidate_id": "cand_ava_chen",
+    "consistency": 0.78,
+    "initiative": 0.86,
+    "adaptability": 0.82,
+    "leadership": 0.84,
+    "project_diversity": 0.7,
+    "collaboration": 0.8,
+    "learning_speed": 0.76
+  },
+  {
+    "candidate_id": "cand_mateo_singh",
+    "consistency": 0.72,
+    "initiative": 0.8,
+    "adaptability": 0.83,
+    "leadership": 0.68,
+    "project_diversity": 0.78,
+    "collaboration": 0.88,
+    "learning_speed": 0.84
+  },
+  {
+    "candidate_id": "cand_nora_patel",
+    "consistency": 0.64,
+    "initiative": 0.7,
+    "adaptability": 0.88,
+    "leadership": 0.6,
+    "project_diversity": 0.73,
+    "collaboration": 0.78,
+    "learning_speed": 0.9
+  }
+]

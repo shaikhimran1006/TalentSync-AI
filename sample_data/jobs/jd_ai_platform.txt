@@ -1,0 +1,22 @@
+Title: Senior AI Platform Engineer
+
+We are hiring a Senior AI Platform Engineer to build scalable GenAI infrastructure and developer tooling. You will partner with product and research to deliver reliable, secure, and observable AI services.
+
+Responsibilities:
+- Build distributed model serving and retrieval pipelines
+- Own infra-as-code, CI/CD, and runtime observability
+- Collaborate with ML engineers on evaluation and data pipelines
+- Drive reliability, performance, and cost optimization
+- Mentor engineers and set technical direction
+
+Requirements:
+- Strong Python and backend systems experience
+- Experience with vector databases, embeddings, and RAG workflows
+- Kubernetes, Docker, and cloud infrastructure (AWS or GCP)
+- API design, async services, and system design skills
+- Excellent communication and cross-functional collaboration
+
+Preferred:
+- Experience with FAISS or similar vector search systems
+- Applied NLP or LLM product experience
+- Startup mindset with high ownership

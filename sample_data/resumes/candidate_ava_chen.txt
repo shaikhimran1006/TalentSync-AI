@@ -1,0 +1,21 @@
+Ava Chen
+AI Platform Engineer
+
+Summary
+AI platform engineer with 7+ years building ML infrastructure, vector search systems, and distributed APIs. Led platform modernization and improved model latency by 35%.
+
+Experience
+- Lead AI Platform Engineer, OrbitAI (2021-2026)
+  - Built FAISS-backed retrieval system and async model-serving APIs
+  - Led Kubernetes migration and CI/CD pipeline upgrades
+- Senior Backend Engineer, Skyline Cloud (2018-2021)
+  - Designed scalable Python services and event-driven pipelines
+
+Skills
+Python, FastAPI, FAISS, Docker, Kubernetes, AWS, Terraform, Redis, Postgres, CI/CD, Observability
+
+Education
+BS Computer Science
+
+Certifications
+AWS Solutions Architect
