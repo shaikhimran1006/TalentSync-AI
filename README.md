@@ -1,5 +1,7 @@
 # TalentSync AI
 
+Live demo: https://talentsyncai.onrender.com/
+
 TalentSync AI is an AI hiring intelligence platform that simulates elite recruiter reasoning. It goes beyond keyword matching by understanding job intent, evaluating semantic fit, inferring transferable skills, and producing explainable rankings with recruiter-style insights.
 
 ## Why it wins
