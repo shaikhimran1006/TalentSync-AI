@@ -1,14 +1,16 @@
 from __future__ import annotations
 
 from fastapi import APIRouter, File, HTTPException, UploadFile
+from fastapi.responses import Response
 
 from app.schemas.chat import ChatRequest, ChatResponse
 from app.schemas.candidate import CandidateResponse, CandidateSummary
 from app.schemas.job import JobAnalyzeRequest, JobAnalyzeResponse
-from app.schemas.ranking import RankingRequest, RankingResponse
+from app.schemas.ranking import RankingPdfRequest, RankingRequest, RankingResponse
 from app.services.chat_service import handle_chat
 from app.services.data_store import data_store
 from app.services.jd_service import analyze_job
+from app.services.pdf_service import build_ranked_candidates_pdf
 from app.services.ranking_service import find_similar_candidates, rank_candidates
 from resume_parser.parser import parse_resume_file
 
@@ -63,6 +65,15 @@ async def get_similar_candidates(candidate_id: str) -> CandidateSummary:
 async def rank_candidates_endpoint(payload: RankingRequest) -> RankingResponse:
     ranked = await rank_candidates(payload)
     return RankingResponse(ranked_candidates=ranked)
+
+
+@api_router.post("/rank/pdf")
+async def rank_candidates_pdf(payload: RankingPdfRequest) -> Response:
+    ranked = await rank_candidates(payload)
+    top_n = payload.top_n if payload.top_n and payload.top_n > 0 else 5
+    pdf_bytes = build_ranked_candidates_pdf(payload.job_title, ranked[:top_n])
+    headers = {"Content-Disposition": "attachment; filename=top-ranked-candidates.pdf"}
+    return Response(content=pdf_bytes, media_type="application/pdf", headers=headers)
 
 
 @api_router.post("/chat", response_model=ChatResponse)

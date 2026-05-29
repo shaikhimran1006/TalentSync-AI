@@ -14,6 +14,10 @@ class RankingRequest(BaseModel):
     candidate_ids: Optional[List[str]] = None
 
 
+class RankingPdfRequest(RankingRequest):
+    top_n: Optional[int] = None
+
+
 class RankedCandidate(BaseModel):
     candidate: Candidate
     scores: Dict[str, float]

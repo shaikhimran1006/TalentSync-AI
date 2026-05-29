@@ -11,7 +11,7 @@ import AiInsight from "@/components/ai-insight";
 import CandidateTable from "@/components/candidate-table";
 import MetricCard from "@/components/metric-card";
 import SkillTransferGraph from "@/components/skill-transfer-graph";
-import { analyzeJob, rankCandidates } from "@/lib/api";
+import { analyzeJob, downloadRankedCandidatesPdf, rankCandidates } from "@/lib/api";
 import { candidates as fallbackCandidates, skillTransferGraph } from "@/lib/mock-data";
 import type { Candidate } from "@/lib/types";
 
@@ -37,6 +37,7 @@ export default function DashboardPage() {
   const [rankedCandidates, setRankedCandidates] = useState<Candidate[]>(fallbackCandidates);
   const [status, setStatus] = useState("");
   const [error, setError] = useState("");
+  const [isDownloading, setIsDownloading] = useState(false);
 
   const handleAnalyze = async () => {
     if (!jobDescription.trim()) {
@@ -75,6 +76,39 @@ export default function DashboardPage() {
     } catch (err) {
       const message = err instanceof Error ? err.message : "Ranking failed.";
       setError(message);
+    }
+  };
+
+  const handleDownload = async () => {
+    if (!jobDescription.trim()) {
+      setError("Job description is required.");
+      return;
+    }
+
+    setError("");
+    setStatus("Preparing PDF...");
+    setIsDownloading(true);
+
+    try {
+      const blob = await downloadRankedCandidatesPdf({
+        jobTitle: jobTitle || "Role",
+        jobDescription,
+        topN: 5
+      });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = "top-ranked-candidates.pdf";
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+      setStatus("PDF downloaded.");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "PDF download failed.";
+      setError(message);
+    } finally {
+      setIsDownloading(false);
     }
   };
 
@@ -141,9 +175,14 @@ export default function DashboardPage() {
 
       <section className="grid gap-6 lg:grid-cols-[2fr_1fr]">
         <Card>
-          <CardHeader>
-            <CardTitle>Top Ranked Candidates</CardTitle>
-            <p className="text-sm text-white/60">Semantic ranking with recruiter-grade reasoning.</p>
+          <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <CardTitle>Top Ranked Candidates</CardTitle>
+              <p className="text-sm text-white/60">Semantic ranking with recruiter-grade reasoning.</p>
+            </div>
+            <Button variant="outline" onClick={handleDownload} disabled={isDownloading}>
+              {isDownloading ? "Preparing PDF..." : "Download Top 5 PDF"}
+            </Button>
           </CardHeader>
           <CardContent>
             <CandidateTable data={rankedCandidates} />

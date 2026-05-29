@@ -188,6 +188,33 @@ export async function rankCandidates(input: {
   return ranked.map((item) => mapCandidate(item.candidate, item.scores, item.final_score));
 }
 
+export async function downloadRankedCandidatesPdf(input: {
+  jobTitle: string;
+  jobDescription: string;
+  topN?: number;
+}): Promise<Blob> {
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+  if (!baseUrl) {
+    throw new Error("NEXT_PUBLIC_API_URL is not set");
+  }
+
+  const response = await fetch(`${baseUrl}/rank/pdf`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      job_title: input.jobTitle,
+      job_description: input.jobDescription,
+      top_n: input.topN ?? 5
+    })
+  });
+
+  if (!response.ok) {
+    throw new Error("PDF download failed");
+  }
+
+  return await response.blob();
+}
+
 export async function sendChat(input: {
   query: string;
   jobTitle: string;
